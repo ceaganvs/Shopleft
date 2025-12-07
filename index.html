@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .product-card {
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .price {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .product-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 50px;
+        }
+        
+        .company-logo {
+            width: 80px;
+            height: 80px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .hero-section {
+            background: green;
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .btn-buy {
+            background-color: #27ae60;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-buy:hover {
+            background-color: #229954;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ShopLeft</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cart <span class="badge bg-primary">0</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Welcome to ShopLeft</h1>
+            <p class="lead mb-4">Don't miss out on our exclusive deals!</p>
+            <a href="#products" class="btn btn-light btn-lg">Shop Now</a>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="container my-5" id="products">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Our Products</h2>
+            <p class="lead">Browse our collection of premium items</p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1571380401583-72ca84994796?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTR8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D" class="card-img-top product-img img-fluid" alt="Smartphone">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title product-name">Premium Smartphone</h5>
+                        
+                        <div class="mt-auto">
+                            <p class="price mb-2">R6,999.99</p>
+                            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1698512475067-74ed7c956c8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2R1Y3QlMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D" class="card-img-top product-img img-fluid" alt="Laptop">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title product-name">Gaming Laptop</h5>
+                        
+                        <div class="mt-auto">
+                            <p class="price mb-2">R11,299.99</p>
+                            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D" class="card-img-top product-img img-fluid" alt="Headphones">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title product-name">Wireless Headphones</h5>
+                        
+                        <div class="mt-auto">
+                            <p class="price mb-2">R2,449.99</p>
+                            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1555487505-8603a1a69755?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODh8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D" class="card-img-top product-img img-fluid" alt="Smartwatch">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title product-name">Smart Watch</h5>
+                      
+                        <div class="mt-auto">
+                            <p class="price mb-2">R4,399.99</p>
+                            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1694466297369-c187a11bc3f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdCUyMHRhYmxldHxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top product-img img-fluid" alt="Tablet">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title product-name">Tablet Pro</h5>
+                        
+                        <div class="mt-auto">
+                            <p class="price mb-2">R2,549.99</p>
+                            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D" class="card-img-top product-img img-fluid" alt="Camera">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title product-name">Digital Camera</h5>
+                        
+                        <div class="mt-auto">
+                            <p class="price mb-2">R8,999.99</p>
+                            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1543512214-318c7553f230?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D" class="card-img-top product-img img-fluid" alt="Speaker">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title product-name">Bluetooth Speaker</h5>
+                        
+                        <div class="mt-auto">
+                            <p class="price mb-2">R1,149.99</p>
+                            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1758577515339-93872db0d37e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2R1Y3QlMjB0dnxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top product-img img-fluid" alt="Monitor">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title product-name">4K Monitor</h5>
+                        
+                        <div class="mt-auto">
+                            <p class="price mb-2">R5,999.99</p>
+                            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxwcm9kdWN0fGVufDB8fDB8fHww" class="card-img-top product-img img-fluid" alt="Keyboard">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title product-name">Mechanical Keyboard</h5>
+                        
+                        <div class="mt-auto">
+                            <p class="price mb-2">R979.99</p>
+                            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1721744179382-0f8b0f19789e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZHVjdCUyMG1vdXNlfGVufDB8fDB8fHww" class="card-img-top product-img img-fluid" alt="Mouse">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title product-name">Gaming Mouse</h5>
+                       
+                        <div class="mt-auto">
+                            <p class="price mb-2">R589.99</p>
+                            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with Contact Form -->
+    <footer class="py-5" id="contact">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Company Logo -->
+                <div class="col-md-2 text-center mb-4 mb-md-0">
+                    <div class="company-logo mx-auto">
+                        SL
+                    </div>
+                    <h6 class="mt-2">ShopLeft</h6>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-md-10">
+                    <h4 class="mb-4">Get in Touch</h4>
+                    <form>
+                        <div class="row mb-3">
+                            <label for="firstName" class="col-sm-3 col-form-label">First Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="lastName" class="col-sm-3 col-form-label">Last Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="email" class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
+                            <div class="col-sm-9">
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="subject" class="col-sm-3 col-form-label">Subject</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="message" class="col-sm-3 col-form-label">Message</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="message" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-9 offset-sm-3">
+                                <button type="submit" class="btn btn-light">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4 pt-4 border-top">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 ShopLeft.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS for interactivity -->
+    <script>
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add cart functionality (placeholder)
+        document.querySelectorAll('.btn-buy').forEach(button => {
+            button.addEventListener('click', function() {
+                this.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Adding...';
+                setTimeout(() => {
+                    this.innerHTML = 'Added to Cart!';
+                    this.classList.remove('btn-primary');
+                    this.classList.add('btn-success');
+                    setTimeout(() => {
+                        this.innerHTML = 'Buy Now';
+                        this.classList.remove('btn-success');
+                        this.classList.add('btn-primary');
+                    }, 2000);
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
